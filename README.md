@@ -17,3 +17,5 @@ test {
 I'd reall ylike to figure out how that's supposed to work and actually solve the problem
 
 3) logging: In the end, I'll be logging within a docker environment. I thing spring boot logs to STDOUT by default, but I really want to tests this to understand how , for examle, muytli-line log entries get converted to log objects by the docker driver().
+
+sdfgfsf

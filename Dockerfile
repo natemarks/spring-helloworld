@@ -16,5 +16,7 @@ ARG JAR_FILE=build/libs/spring-helloworld-0.1.0.jar
 # Add the application's jar to the container
 ADD ${JAR_FILE} spring-helloworld.jar
 
+ENV RESPONSE_STRING Some Helloworld String
+
 # Run the jar file
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-helloworld.jar"]

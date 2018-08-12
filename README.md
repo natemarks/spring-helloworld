@@ -7,7 +7,10 @@ It's meant to be a basic spring boot rest project with configuration and logging
 Open problems to solve:
 
 
-1) I want to figure out logging before I get to far into the real project. In the end, I'll be logging within a docker environment. I think spring boot logs to STDOUT by default, but I really want to test this to understand how , for example, multi-line log entries get converted to log objects by the docker driver().
+1) I want to figure out logging before I get to far into the real project. In the end, I'll be logging within a docker environment. I think spring boot logs to STDOUT by default, but I really want to test this to understand how , for example, multi-line log entries get converted to log objects by the docker driver(). 
+
+Is this a good approach?  If so, how to I make the confgi file a part of my jar in the build process?  ANd then I think I need to be able to override the logging level at runtime.
+https://www.baeldung.com/spring-boot-logging
 
 
 2) when trying to do that, I ran gradlew build, which fails unless I force it to ignore :test failures by putting this in the gradle.build

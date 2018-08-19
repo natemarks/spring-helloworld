@@ -38,3 +38,5 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
+
+compileJava.dependsOn(processResources)

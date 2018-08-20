@@ -1,4 +1,8 @@
 # spring-helloworld
+
+TODO: implement logback
+
+TODO: set logging level via configurationproperties
 I borrowed the starting point for this project from:  https://www.youtube.com/watch?v=27I1M5RLplE
 
 

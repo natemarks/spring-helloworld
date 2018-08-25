@@ -25,4 +25,4 @@ ADD ${CONFIG_FILE} application.properties
 # ENV RESPONSE_STRING Some Helloworld String in DOCKER
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-helloworld.jar","--spring.config.location=file:${configDirectory}/application.properties"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-helloworld.jar","--spring.config.location=file:application.properties"]

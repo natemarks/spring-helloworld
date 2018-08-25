@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Component
 @RestController
 public class HelloWorld {
+    Logger logger = LoggerFactory.getLogger(LoggingController.class);
 
     @Autowired
     private Config config;
@@ -16,7 +17,8 @@ public class HelloWorld {
     @RequestMapping("/")
     public String Index()
     {
-
+        logger.debug("A DEBUG Message");
+        logger.info("An INFO Message");
         return config.getResponse();
     }
 }

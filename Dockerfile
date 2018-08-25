@@ -16,7 +16,13 @@ ARG JAR_FILE=build/libs/spring-helloworld-0.1.0.jar
 # Add the application's jar to the container
 ADD ${JAR_FILE} spring-helloworld.jar
 
-ENV RESPONSE_STRING Some Helloworld String in DOCKER
+# The application's jar file
+ARG CONFIG_FILE=build/resources/main/application.properties
+
+# Add the application's jar to the container
+ADD ${CONFIG_FILE} application.properties
+
+# ENV RESPONSE_STRING Some Helloworld String in DOCKER
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-helloworld.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-helloworld.jar","--spring.config.location=file:${configDirectory}/application.properties"]
